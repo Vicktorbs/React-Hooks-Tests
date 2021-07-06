@@ -4,7 +4,11 @@ export const useFetch = (url) => {
     // Se ejecuta cuando el componente se monta
     const isMounted = useRef(true);
 
-    const [state, setState] = useState({data: null, loading: true, error: null});
+    const [state, setState] = useState({
+        data: null, 
+        loading: true, 
+        error: null
+    });
 
     // Se ejecuta cuando el componente se desmonta evitando errores que pueden ocasionar perdida de memoria al llamar a un componente desmontado
     useEffect(() => {
@@ -25,6 +29,13 @@ export const useFetch = (url) => {
                         data
                     })
                 }
+            })
+            .catch(() => {
+                setState({
+                    data: null, 
+                    loading: false, 
+                    error: 'No se pudo cargar la info'
+                })
             })
     }, [url]);
 
