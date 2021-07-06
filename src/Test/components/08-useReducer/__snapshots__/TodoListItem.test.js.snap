@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests on component <TodoListItem /> should show it correctly 1`] = `
+<Fragment>
+  <p
+    className="false"
+    onClick={[Function]}
+  >
+    4236
+    . 
+    Learn React
+  </p>
+  <button
+    className="btn btn-danger"
+    onClick={[Function]}
+  >
+    Borrar
+  </button>
+</Fragment>
+`;

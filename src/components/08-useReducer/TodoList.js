@@ -9,7 +9,7 @@ export const TodoList = ({todos, handleDelete, handleToggle}) => {
             {
                 todos.map((todo, i) => (
                     <li className="list-group-item" key={ todo.id }>
-                        <TodoListItem todo={ todo } i={ i } handleToggle={ handleToggle } handleDelete={ handleDelete } />
+                        <TodoListItem todo={ todo } index={ i } handleToggle={ handleToggle } handleDelete={ handleDelete } />
                         {/* <p className={ `${ todo.done && 'complete' }` } onClick={ () => handleToggle(todo.id) }>{ i + 1 }. { todo.desc }</p>
                         <button className="btn btn-danger" onClick={ () => { handleDelete(todo.id) } }>
                             Borrar
